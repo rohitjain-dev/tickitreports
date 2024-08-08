@@ -1,3 +1,3 @@
 {% cache %}
-SELECT * FROM sales1_cache WHERE buyerid = {{context.params.bid}};
+SELECT * FROM sales_cache1 WHERE buyerid = {{context.params.bid}};
 {% endcache %}
