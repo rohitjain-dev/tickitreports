@@ -1,0 +1,18 @@
+urlPath: /categories/popularity
+description: Retrieve popularity metrics for event categories including total tickets sold per category.
+source: talosredshift
+cache:
+  - cacheTableName: 'category_cache'
+    source: talosredshift
+  - cacheTableName : 'event_cache'
+    source: talosredshift 
+  - cacheTableName : 'sales_cache' 
+    source: talosredshift 
+response:
+  - name: catname
+    description: name of category
+  - name : total_tickets
+    description: total tickets sold till date   
+
+
+    

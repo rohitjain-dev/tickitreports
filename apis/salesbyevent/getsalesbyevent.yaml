@@ -1,0 +1,9 @@
+urlPath: /events/:id/sales
+description: Retrieve sales details for a specific event including ticket quantity sold, price paid, and sale time.
+request :
+  - fieldName: id
+    fieldIn: path
+source: talosredshift
+cache:
+  - cacheTableName: 'sales1_cache'
+    source: talosredshift

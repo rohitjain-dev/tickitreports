@@ -1,0 +1,12 @@
+name: tickit
+description: A talos-redshift app
+version: 0.0.1
+auth:
+  heimdallUrl: https://liberal-donkey.dataos.app/heimdall
+logLevel: 'DEBUG'
+cachePath: tmp
+sources:
+  - name: talosredshift
+    type: depot
+    cache:
+      region: us-east-2

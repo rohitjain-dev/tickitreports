@@ -1,0 +1,20 @@
+urlPath: /events/:id
+description: Retrieve detailed information for a specific event.
+request :
+  - fieldName: id
+    fieldIn: path
+source: talosredshift
+response:
+  - name: eventid
+    description: id of the event
+    type : number
+  - name : venueid
+    description: id of the venue
+  - name : catid
+    description: id of the category
+  - name : dateid
+    description: id of the date
+  - name : eventname
+    description: name of the event   
+  - name : starttime    
+    description: start time of the event   

@@ -1,0 +1,10 @@
+urlPath: /users/:bid/purchases
+description: Retrieve all purchases made by a specific user.
+request :
+  - fieldName: bid
+    fieldIn: path
+source: talosredshift
+cache:
+  - cacheTableName: 'sales_cache1'
+    sql: 'SELECT * FROM sales'
+    source: talosredshift

@@ -1,0 +1,6 @@
+urlPath: /venues/:id/performance
+description: Retrieve performance metrics for a specific venue including number of events hosted and total tickets sold.
+request :
+  - fieldName: id
+    fieldIn: path
+source: talosredshift

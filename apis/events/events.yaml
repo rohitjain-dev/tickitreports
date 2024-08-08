@@ -1,0 +1,7 @@
+urlPath: /events
+description: Retrieve details of all events including event ID, name, venue, category, and start time.
+source: talosredshift
+cache:
+  - cacheTableName: 'events_cache'
+    source: talosredshift
+
