@@ -5,5 +5,7 @@
 
 {% if eventidcount.value()[0].count == 0 %}
     {% error "STORE_NOT_FOUND" %}
-{% endif %} 
-SELECT * FROM sales1 WHERE eventid = {{ context.params.id }}; 
+{% endif %}
+{% cache %} 
+    SELECT * FROM sales1_cache WHERE eventid = {{ context.params.id }};
+{% endcache %}    

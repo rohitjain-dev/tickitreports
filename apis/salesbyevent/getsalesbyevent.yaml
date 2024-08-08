@@ -4,6 +4,6 @@ request :
   - fieldName: id
     fieldIn: path
 source: talosredshift
-# cache:
-#   - cacheTableName: 'sales1_cache'
-#     source: talosredshift
+cache:
+  - cacheTableName: 'sales1_cache'
+    source: talosredshift
