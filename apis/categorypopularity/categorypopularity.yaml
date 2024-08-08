@@ -3,7 +3,7 @@ description: Retrieve popularity metrics for event categories including total ti
 source: talosredshift
 cache:
   - cacheTableName: 'category_cache'
-    source: talosredshift
+    source: talosredshift  
   - cacheTableName : 'event_cache'
     source: talosredshift 
   - cacheTableName : 'sales_cache' 
