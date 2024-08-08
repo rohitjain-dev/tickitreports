@@ -1,8 +1,9 @@
-{% cache %} 
+
 {% req eventidcount %}
     SELECT COUNT(*) as count FROM sales WHERE eventid = {{context.params.id}};
 {% endreq %}
 
+{% cache %} 
 {% if eventidcount.value()[0].count == 0 %}
     {% error "EVENT_NOT_FOUND" %}
 {% endif %}
