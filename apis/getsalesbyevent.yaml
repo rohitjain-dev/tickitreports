@@ -5,5 +5,5 @@ request :
     fieldIn: path
 source: talosredshift
 cache:
-  - cacheTableName: 'sales_cache'
+  - cacheTableName: 'sales1_cache'
     source: talosredshift
