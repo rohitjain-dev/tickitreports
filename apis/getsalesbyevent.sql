@@ -1,3 +1,2 @@
-{% cache %}
- SELECT * FROM sales1_cache WHERE eventid = {{ context.params.id }};       
-{% endcache %}    
+
+ SELECT * FROM sales WHERE eventid = {{ context.params.id }};       
