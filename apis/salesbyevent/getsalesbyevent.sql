@@ -4,9 +4,10 @@
 {% endreq %}
 
 {% cache %} 
-{% if eventidcount.value()[0].count == 0 %}
+{%if eventidcount.value()[0].count == 0 %}
     {% error "EVENT_NOT_FOUND" %}
+{%else %}
+ SELECT * FROM sales1_cache WHERE eventid = {{ context.params.id }};    
 {% endif %}
-
-    SELECT * FROM sales1_cache WHERE eventid = {{ context.params.id }};
+   
 {% endcache %}    
