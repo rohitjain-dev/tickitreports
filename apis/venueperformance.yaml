@@ -1,6 +1,13 @@
-urlPath: /venues/:id/performance
+urlPath: /venues/performance
 description: Retrieve performance metrics for a specific venue including number of events hosted and total tickets sold.
-request :
-  - fieldName: id
-    fieldIn: path
 source: talosredshift
+cache:
+  - cacheTableName : venuecache
+    sql: select * from venue
+    source: talosredshift
+  - cacheTableName : sales4
+    sql: select * from sales
+    source: talosredshift
+  - cacheTableName : event4
+    sql : select * from event
+    source: talosredshift
