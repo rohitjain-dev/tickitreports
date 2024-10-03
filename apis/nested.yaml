@@ -1,3 +1,6 @@
 urlPath: /nested
 description: check for nested
+request :
+  - fieldName: id
+    fieldIn: path
 source: talosredshift

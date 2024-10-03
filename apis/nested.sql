@@ -1,8 +1,10 @@
 SELECT
-    'Venuedetails' AS venue_details,
-    v.venueid AS venue_id,
-    v.venuename AS venue_name,
-    v.venuecity AS venue_city,
-    e.eventname AS event_name
-FROM public.venue AS v
-JOIN public.event AS e ON v.venueid = e.venueid;
+    public.venue.venuename,
+    public.venue.venuecity,
+    public.users.username AS buyer,
+FROM public.event
+JOIN public.venue ON public.event.venueid = public.venue.venueid
+JOIN public.sales ON public.event.eventid = public.sales.eventid
+JOIN public.users ON public.sales.buyerid = public.users.userid
+WHERE public.event.eventid = {{context.params.id}}
+LIMIT 10;
