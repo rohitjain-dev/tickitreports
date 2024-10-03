@@ -1,12 +1,7 @@
 SELECT
-    public.event.eventid,
-    public.event.eventname,
+    public.venue.venueid,
     public.venue.venuename,
-    public.venue.venuecity,
-    public.sales.buyerid,
-    public.users.username AS buyer_name
-FROM public.event
-JOIN public.venue ON public.event.venueid = public.venue.venueid
-JOIN public.sales ON public.event.eventid = public.sales.eventid
-JOIN public.users ON public.sales.buyerid = public.users.userid
-LIMIT 10;
+    JSON_AGG(JSON_BUILD_OBJECT('eventname', public.event.eventname, 'city', public.venue.venuecity)) AS eventhosted
+FROM public.venue
+JOIN public.event ON public.venue.venueid = public.event.venueid
+GROUP BY public.venue.venueid, public.venue.venuename LIMIT 5;
