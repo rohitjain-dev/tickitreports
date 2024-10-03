@@ -1,4 +1,4 @@
-urlPath: /nested
+urlPath: /nested/:id
 description: check for nested
 request :
   - fieldName: id
