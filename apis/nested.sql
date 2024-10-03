@@ -4,4 +4,4 @@ SELECT
     public.event.eventname,
     public.venue.venuecity
 FROM public.venue
-JOIN public.event ON public.venue.venueid = public.event.venueid;
+JOIN public.event ON public.venue.venueid = public.event.venueid LIMIT 10;
