@@ -17,7 +17,7 @@ NestedResults AS (
         eventid,
         eventname,
         JSON_BUILD_OBJECT('name', venuename, 'city', venuecity) AS venue,
-        JSON_AGG(JSON_BUILD_OBJECT('buyer', buyer_name, 'price', priceperticket)) AS sales
+        JSON_AGG(JSON_BUILD_OBJECT('buyer', buyer_name, 'price', public.sales.priceperticket)) AS sales
     FROM EventData
     GROUP BY eventid, eventname, venuename, venuecity
 )
