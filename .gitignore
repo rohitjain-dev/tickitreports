@@ -1,1 +1,4 @@
 deployment.yaml
+talos_cache.db
+docker-compose.yaml
+/tmp

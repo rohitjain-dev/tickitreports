@@ -1,0 +1,3 @@
+urlPath: /allvenues
+description: retrive events hosted on each venue
+source: talosredshift
